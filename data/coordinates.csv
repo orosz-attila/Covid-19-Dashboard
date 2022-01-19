@@ -1,0 +1,245 @@
+CountryName,CapitalName,CapitalLatitude,CapitalLongitude,CountryCode,ContinentName
+Somaliland,Hargeisa,9.55,44.05,NULL,Africa
+South Georgia and South Sandwich Islands,King Edward Point,-54.283333,-36.5,GS,Antarctica
+French Southern and Antarctic Lands,Port-aux-Français,-49.35,70.216667,TF,Antarctica
+Palestine,Jerusalem,32.18,35.27,PS,Asia
+Aland Islands,Mariehamn,60.116667,19.9,AX,Europe
+Nauru,Yaren,-0.5477,166.920867,NR,Australia
+Saint Martin,Marigot,18.0731,-63.0822,MF,North America
+Tokelau,Atafu,-9.166667,-171.833333,TK,Australia
+Western Sahara,El-Aaiún,27.153611,-13.203333,EH,Africa
+Afghanistan,Kabul,33.36,65.36,AF,Asia
+Albania,Tirana,41.3166666666667,19.816667,AL,Europe
+Algeria,Algiers,30.01,3.02,DZ,Africa
+American Samoa,Pago Pago,-14.2666666666667,-170.7,AS,Australia
+Andorra,Andorra la Vella,42.5,1.516667,AD,Europe
+Angola,Luanda,-10.94,17.59,AO,Africa
+Anguilla,The Valley,18.2166666666667,-63.05,AI,North America
+Antigua and Barbuda,Saint John's,17.1166666666667,-61.85,AG,North America
+Argentina,Buenos Aires,-36.23,-63.8,AR,South America
+Armenia,Yerevan,40.1666666666667,44.5,AM,Europe
+Aruba,Oranjestad,12.5166666666667,-70.033333,AW,North America
+Australia,Canberra,-23.27,134.6,AU,Australia
+Austria,Vienna,47.59,14.77,AT,Europe
+Azerbaijan,Baku,40.3833333333333,49.866667,AZ,Europe
+Bahamas,Nassau,25.0833333333333,-77.35,BS,North America
+Bahrain,Manama,26.2333333333333,50.566667,BH,Asia
+Bangladesh,Dhaka,23.7166666666667,90.4,BD,Asia
+Barbados,Bridgetown,13.1,-59.616667,BB,North America
+Belarus,Minsk,53.9,27.566667,BY,Europe
+Belgium,Brussels,50.8333333333333,4.333333,BE,Europe
+Belize,Belmopan,17.25,-88.766667,BZ,Central America
+Benin,Porto-Novo,10,2.44,BJ,Africa
+Bermuda,Hamilton,32.2833333333333,-64.783333,BM,North America
+Bhutan,Thimphu,27.4666666666667,89.633333,BT,Asia
+Bolivia,La Paz,-17.94,-63.38,BO,South America
+Bosnia and Herzegovina,Sarajevo,44.28,17.87,BA,Europe
+Botswana,Gaborone,-22.49,24.21,BW,Africa
+Brazil,Brasilia,-10.43,-51.17,BR,South America
+British Virgin Islands,Road Town,18.4166666666667,-64.616667,VG,North America
+Brunei,Bandar Seri Begawan,4.88333333333333,114.933333,BN,Asia
+Bulgaria,Sofia,42.6833333333333,25.44,BG,Europe
+Burkina Faso,Ouagadougou,12.3666666666667,-1.516667,BF,Africa
+Myanmar,Rangoon,22.1,96.39,MM,Asia
+Burundi,Bujumbura,-3.36666666666667,29.35,BI,Africa
+Cambodia,Phnom Penh,11.55,104.916667,KH,Asia
+Cameroon,Yaounde,3.86666666666667,11.516667,CM,Africa
+Canada,Ottawa,58.46,-103.65,CA,Central America
+Cape Verde,Praia,14.9166666666667,-23.516667,CV,Africa
+Cayman Islands,George Town,19.3,-81.383333,KY,North America
+Central African Republic,Bangui,6.66,20.48,CF,Africa
+Chad,N'Djamena,15.98,19.04,TD,Africa
+Chile,Santiago,-33.45,-70.666667,CL,South America
+China,Beijing,34.85,104.06,CN,Asia
+Christmas Island,The Settlement,-10.4166666666667,105.716667,CX,Australia
+Cocos Islands,West Island,-12.1666666666667,96.833333,CC,Australia
+Colombia,Bogota,4.6,-74.083333,CO,South America
+Comoros,Moroni,-11.7,43.233333,KM,Africa
+Democratic Republic of Congo,Kinshasa,-3.08,23.74,CD,Africa
+Congo,Brazzaville,-4.25,15.283333,CG,Africa
+Cook Islands,Avarua,-21.2,-159.766667,CK,Australia
+Costa Rica,San Jose,9.93333333333333,-84.083333,CR,Central America
+Cote d'Ivoire,Yamoussoukro,6.81666666666667,-5.266667,CI,Africa
+Croatia,Zagreb,45.69,16.67,HR,Europe
+Cuba,Havana,21.92,-78.64,CU,North America
+Curacao,Willemstad,12.1,-68.916667,CW,North America
+Cyprus,Nicosia,35.1666666666667,33.366667,CY,Europe
+Czechia,Prague,49.86,15.62,CZ,Europe
+Denmark,Copenhagen,55.79,10.45,DK,Europe
+Djibouti,Djibouti,11.5833333333333,43.15,DJ,Africa
+Dominica,Roseau,15.3,-61.4,DM,North America
+Dominican Republic,Santo Domingo,18.4666666666667,-69.9,DO,North America
+Ecuador,Quito,-0.216666666666667,-78.5,EC,South America
+Egypt,Cairo,26.36,30.17,EG,Africa
+El Salvador,San Salvador,13.7,-89.2,SV,Central America
+Equatorial Guinea,Malabo,1.6,10.57,GQ,Africa
+Eritrea,Asmara,15.3333333333333,38.933333,ER,Africa
+Estonia,Tallinn,58.62,25.85,EE,Europe
+Ethiopia,Addis Ababa,9.03333333333333,38.7,ET,Africa
+Falkland Islands,Stanley,-51.7,-57.85,FK,South America
+Faeroe Islands,Torshavn,62,-6.766667,FO,Europe
+Fiji,Suva,-18.1333333333333,178.416667,FJ,Australia
+Finland,Helsinki,62.71,26.15,FI,Europe
+France,Paris,46.91,2.73,FR,Europe
+French Polynesia,Papeete,-17.5333333333333,-149.566667,PF,Australia
+Gabon,Libreville,-0.36,12.08,GA,Africa
+Gambia,Banjul,13.45,-16.566667,GM,Africa
+Georgia,Tbilisi,41.6833333333333,44.833333,GE,Europe
+Germany,Berlin,51.13,10.48,DE,Europe
+Ghana,Accra,8.28,-1.17,GH,Africa
+Gibraltar,Gibraltar,36.1333333333333,-5.35,GI,Europe
+Greece,Athens,37.9833333333333,23.733333,GR,Europe
+Greenland,Nuuk,64.97,-45.01,GL,Central America
+Grenada,Saint George's,12.05,-61.75,GD,North America
+Guam,Hagatna,13.4666666666667,144.733333,GU,Australia
+Guatemala,Guatemala City,14.6166666666667,-90.516667,GT,Central America
+Guernsey,Saint Peter Port,49.45,-2.533333,GG,Europe
+Guinea,Conakry,10.39,-10.65,GN,Africa
+Guinea-Bissau,Bissau,11.85,-15.583333,GW,Africa
+Guyana,Georgetown,6.8,-58.15,GY,South America
+Haiti,Port-au-Prince,18.5333333333333,-72.333333,HT,North America
+Vatican,Vatican City,41.9,12.45,VA,Europe
+Honduras,Tegucigalpa,14.1,-87.216667,HN,Central America
+Hungary,Budapest,47.04,18.96,HU,Europe
+Iceland,Reykjavik,64.72,-18.13,IS,Europe
+India,New Delhi,22.53,79.59,IN,Asia
+Indonesia,Jakarta,-2.48,114.94,ID,Asia
+Iran,Tehran,32.18,54.5,IR,Asia
+Iraq,Baghdad,33.3333333333333,44.4,IQ,Asia
+Ireland,Dublin,53.11,-7.94,IE,Europe
+Isle of Man,Douglas,54.15,-4.483333,IM,Europe
+Israel,Jerusalem,31.12,34.89,IL,Asia
+Italy,Rome,41.9,12.483333,IT,Europe
+Jamaica,Kingston,18,-76.8,JM,North America
+Japan,Tokyo,35.6833333333333,139.75,JP,Asia
+Jersey,Saint Helier,49.1833333333333,-2.1,JE,Europe
+Jordan,Amman,31.25,37.53,JO,Asia
+Kazakhstan,Astana,47.93,64.14,KZ,Asia
+Kenya,Nairobi,-1.28333333333333,36.816667,KE,Africa
+Kiribati,Tarawa,-0.883333333333333,169.533333,KI,Australia
+North Korea,Pyongyang,39.0166666666667,125.75,KP,Asia
+South Korea,Seoul,37.55,126.983333,KR,Asia
+Kosovo,Pristina,42.6666666666667,21.166667,KO,Europe
+Kuwait,Kuwait City,29.3666666666667,47.966667,KW,Asia
+Kyrgyzstan,Bishkek,42.8666666666667,74.6,KG,Asia
+Laos,Vientiane,19.57,102.64,LA,Asia
+Latvia,Riga,56.95,24.1,LV,Europe
+Lebanon,Beirut,33.8666666666667,35.5,LB,Asia
+Lesotho,Maseru,-29.62,28.28,LS,Africa
+Liberia,Monrovia,6.27,-9.21,LR,Africa
+Libya,Tripoli,27.24,17.68,LY,Africa
+Liechtenstein,Vaduz,47.1333333333333,9.516667,LI,Europe
+Lithuania,Vilnius,55.5,23.89,LT,Europe
+Luxembourg,Luxembourg,49.6,6.116667,LU,Europe
+North Macedonia,Skopje,42,21.433333,MK,Europe
+Madagascar,Antananarivo,-18.9166666666667,47.516667,MG,Africa
+Malawi,Lilongwe,-13.9666666666667,33.783333,MW,Africa
+Malaysia,Kuala Lumpur,3.16666666666667,101.7,MY,Asia
+Maldives,Male,4.16666666666667,73.5,MV,Asia
+Mali,Bamako,18.33,-1.13,ML,Africa
+Malta,Valletta,35.8833333333333,14.5,MT,Europe
+Marshall Islands,Majuro,7.1,171.383333,MH,Australia
+Mauritania,Nouakchott,19.5,-9.64,MR,Africa
+Mauritius,Port Louis,-20.15,57.483333,MU,Africa
+Mexico,Mexico City,19.4333333333333,-99.133333,MX,Central America
+Micronesia (country),Palikir,6.91666666666667,158.15,FM,Australia
+Moldova,Chisinau,47,28.85,MD,Europe
+Monaco,Monaco,43.7333333333333,7.416667,MC,Europe
+Mongolia,Ulaanbaatar,47.9166666666667,106.916667,MN,Asia
+Montenegro,Podgorica,42.4333333333333,19.266667,ME,Europe
+Montserrat,Plymouth,16.7,-62.216667,MS,North America
+Morocco,Rabat,34.0166666666667,-6.816667,MA,Africa
+Mozambique,Maputo,-17.8,35.95,MZ,Africa
+Namibia,Windhoek,-22.5666666666667,17.083333,NA,Africa
+Nepal,Kathmandu,27.7166666666667,85.316667,NP,Asia
+Netherlands,Amsterdam,52.35,4.916667,NL,Europe
+New Caledonia,Noumea,-22.2666666666667,166.45,NC,Australia
+New Zealand,Wellington,-41.3,174.783333,NZ,Australia
+Nicaragua,Managua,12.1333333333333,-86.25,NI,Central America
+Niger,Niamey,17.46,10,NE,Africa
+Nigeria,Abuja,9.08333333333333,7.533333,NG,Africa
+Niue,Alofi,-19.0166666666667,-169.916667,NU,Australia
+Norfolk Island,Kingston,-29.05,167.966667,NF,Australia
+Northern Mariana Islands,Saipan,15.2,145.75,MP,Australia
+Norway,Oslo,61.29,8.62,NO,Europe
+Oman,Muscat,20.37,56.86,OM,Asia
+Pakistan,Islamabad,29.65,69.39,PK,Asia
+Palau,Melekeok,7.48333333333333,134.633333,PW,Australia
+Panama,Panama City,8.96666666666667,-79.533333,PA,Central America
+Papua New Guinea,Port Moresby,-9.45,147.183333,PG,Australia
+Paraguay,Asuncion,-25.2666666666667,-57.666667,PY,South America
+Peru,Lima,-12.05,-77.05,PE,South America
+Philippines,Manila,14.6,120.966667,PH,Asia
+Pitcairn,Adamstown,-25.0666666666667,-130.083333,PN,Australia
+Poland,Warsaw,52.25,21,PL,Europe
+Portugal,Lisbon,38.7166666666667,-9.133333,PT,Europe
+Puerto Rico,San Juan,18.4666666666667,-66.116667,PR,North America
+Qatar,Doha,25.2833333333333,51.533333,QA,Asia
+Romania,Bucharest,45.51,24.93,RO,Europe
+Russia,Moscow,58.76,48.67,RU,Europe
+Rwanda,Kigali,-1.95,30.05,RW,Africa
+Saint Barthelemy,Gustavia,17.8833333333333,-62.85,BL,North America
+Saint Helena,Jamestown,-15.9333333333333,-5.716667,SH,Africa
+Saint Kitts and Nevis,Basseterre,17.3,-62.716667,KN,North America
+Saint Lucia,Castries,14,-61,LC,North America
+Saint Pierre and Miquelon,Saint-Pierre,46.7666666666667,-56.183333,PM,Central America
+Saint Vincent and the Grenadines,Kingstown,13.1333333333333,-61.216667,VC,Central America
+Samoa,Apia,-13.8166666666667,-171.766667,WS,Australia
+San Marino,San Marino,43.9333333333333,12.416667,SM,Europe
+Sao Tome and Principe,Sao Tome,0.333333333333333,6.733333,ST,Africa
+Saudi Arabia,Riyadh,24.65,46.7,SA,Asia
+Senegal,Dakar,14.98,-14.32,SN,Africa
+Serbia,Belgrade,44.8333333333333,20.5,RS,Europe
+Seychelles,Victoria,-4.61666666666667,55.45,SC,Africa
+Sierra Leone,Freetown,8.69,-11.77,SL,Africa
+Singapore,Singapore,1.28333333333333,103.85,SG,Asia
+Sint Maarten (Dutch part),Philipsburg,18.0166666666667,-63.033333,SX,North America
+Slovakia,Bratislava,48.73,19.53,SK,Europe
+Slovenia,Ljubljana,46.05,14.516667,SI,Europe
+Solomon Islands,Honiara,-9.43333333333333,159.95,SB,Australia
+Somalia,Mogadishu,2.06666666666667,45.333333,SO,Africa
+South Africa,Pretoria,-31.03,23.99,ZA,Africa
+South Sudan,Juba,6.91,30.5,SS,Africa
+Spain,Madrid,40.4,-3.683333,ES,Europe
+Sri Lanka,Colombo,6.91666666666667,79.833333,LK,Asia
+Sudan,Khartoum,15.6,32.533333,SD,Africa
+Suriname,Paramaribo,5.83333333333333,-55.166667,SR,South America
+Svalbard,Longyearbyen,78.2166666666667,15.633333,SJ,Europe
+Eswatini,Mbabane,-26.3166666666667,31.133333,SZ,Africa
+Sweden,Stockholm,59.3333333333333,18.05,SE,Europe
+Switzerland,Bern,46.9166666666667,7.466667,CH,Europe
+Syria,Damascus,32.92,38.46,SY,Asia
+Taiwan,Taipei,25.0333333333333,121.516667,TW,Asia
+Tajikistan,Dushanbe,38.81,71.45,TJ,Asia
+Tanzania,Dar es Salaam,-6.53,35.04,TZ,Africa
+Thailand,Bangkok,13.75,100.516667,TH,Asia
+Timor,Dili,-8.58333333333333,125.6,TL,Asia
+Togo,Lome,8.53,1,TG,Africa
+Tonga,Nuku'alofa,-21.1333333333333,-175.2,TO,Australia
+Trinidad and Tobago,Port of Spain,10.65,-61.516667,TT,North America
+Tunisia,Tunis,34.93,9.7,TN,Africa
+Turkey,Ankara,39.9333333333333,32.866667,TR,Europe
+Turkmenistan,Ashgabat,40.29,58.78,TM,Asia
+Turks and Caicos Islands,Grand Turk,21.4666666666667,-71.133333,TC,North America
+Tuvalu,Funafuti,-8.51666666666667,179.216667,TV,Australia
+Uganda,Kampala,0.316666666666667,32.55,UG,Africa
+Ukraine,Kyiv,50.4333333333333,30.516667,UA,Europe
+United Arab Emirates,Abu Dhabi,24.4666666666667,54.366667,AE,Asia
+United Kingdom,London,54.4,-1.78,GB,Europe
+United States,Washington,39.26,-98.59,US,Central America
+Uruguay,Montevideo,-32.82,-55.84,UY,South America
+Uzbekistan,Tashkent,41.93,63.97,UZ,Asia
+Vanuatu,Port-Vila,-17.7333333333333,168.316667,VU,Australia
+Venezuela,Caracas,7.3,-65.95,VE,South America
+Vietnam,Hanoi,21.0333333333333,105.85,VN,Asia
+US Virgin Islands,Charlotte Amalie,18.35,-64.933333,VI,North America
+Wallis and Futuna,Mata-Utu,-13.95,-171.933333,WF,Australia
+Yemen,Sanaa,15.67,47.67,YE,Asia
+Zambia,Lusaka,-15.4166666666667,28.283333,ZM,Africa
+Zimbabwe,Harare,-17.8166666666667,31.033333,ZW,Africa
+US Minor Outlying Islands,Washington,38.883333,-77,UM,Australia
+Northern Cyprus,North Nicosia,35.183333,33.366667,NULL,Europe
+Hong Kong,N/A,22.3296187054308,114.161980969162,HK,Asia
+Heard Island and McDonald Islands,N/A,0,0,HM,Antarctica
+British Indian Ocean Territory,Diego Garcia,-7.3,72.4,IO,Africa
+Macao,N/A,22.1867776987689,113.550423844597,MO,Asia
