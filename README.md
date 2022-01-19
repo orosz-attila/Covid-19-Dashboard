@@ -16,4 +16,4 @@ Coming soon..
 - Page Icon: [Lucbyhet](https://en.wikipedia.org/wiki/File:Coronavirus_icon.svg) 
         
 ## License 
-Code of this app is produced by Attila Orosz and completely open access under the [Creative Commons BY license](<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Hello, world!</a>). You have the permission to use, distribute, and reproduce these in any medium, provided the source and authors are credited.
+Code of this app is produced by Attila Orosz and completely open access under the [Creative Commons BY license](<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons BY license!</a>). You have the permission to use, distribute, and reproduce these in any medium, provided the source and authors are credited.
