@@ -169,7 +169,7 @@ def merging_dfs(df, df_coordinates):
 
 
 def df_world(df_owid):
-    '''This function returns the merged dataframe of country(df_merged) and world data'''
+    '''This function returns a dataframe with world data'''
     df_world = df_owid.loc[df_owid['iso_code'] == 'OWID_WRL']
 
     df_world = df_world[[
@@ -269,10 +269,29 @@ def map_initial(df_merged, date, data_category):
     df_today = df_today.rename(columns={'date': 'Date',})
     df_today['size_scaled'] = (df_today[data_category]  - df_today[data_category].min()) / (df_today[data_category].max() - df_today[data_category].min())
     df_today['size_scaled'].fillna(0, inplace=True)
-    df_today['size_scaled'] = np.where(df_today['size_scaled'] < 0.012, 0.012, df_today['size_scaled'])
-    #df_today['size_scaled'] = np.where(np.logical_and(df_today['size_scaled']>=0.01, df_today['size_scaled']<=0.05), 0.05, df_today['size_scaled'])
-    df_today['size_scaled'] = np.where(df_today['size_scaled'] > 0.5, 0.5, df_today['size_scaled'])
-    
+
+    # df_today['size_scaled'] = np.where(df_today['size_scaled'] <= 0.012, 0.012, df_today['size_scaled'])
+    # df_today['size_scaled'] = np.where((df_today['size_scaled']>0.012) & (df_today['size_scaled']<=0.05), 0.05, df_today['size_scaled'])
+    # df_today['size_scaled'] = np.where((df_today['size_scaled']>0.05) & (df_today['size_scaled']<=0.1), 0.1, df_today['size_scaled'])
+    # df_today['size_scaled'] = np.where((df_today['size_scaled']>0.1) & (df_today['size_scaled']<=0.2), 0.2, df_today['size_scaled'])
+    # df_today['size_scaled'] = np.where((df_today['size_scaled']>0.2) & (df_today['size_scaled']<=0.3), 0.3, df_today['size_scaled'])
+    # df_today['size_scaled'] = np.where((df_today['size_scaled']>0.3) & (df_today['size_scaled']<=0.4), 0.4, df_today['size_scaled'])
+    # df_today['size_scaled'] = np.where(df_today['size_scaled'] > 0.4, 0.4, df_today['size_scaled'])
+
+    df_today['size_scaled'] = np.where(df_today['size_scaled'] <= 0.012, 0.012, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.012) & (df_today['size_scaled']<=0.02), 0.02, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.02) & (df_today['size_scaled']<=0.03), 0.03, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.03) & (df_today['size_scaled']<=0.04), 0.04, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.04) & (df_today['size_scaled']<=0.05), 0.05, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.05) & (df_today['size_scaled']<=0.1), 0.1, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.1) & (df_today['size_scaled']<=0.2), 0.2, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.2) & (df_today['size_scaled']<=0.3), 0.3, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.3) & (df_today['size_scaled']<=0.4), 0.4, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.4) & (df_today['size_scaled']<=0.5), 0.4, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.5) & (df_today['size_scaled']<=0.6), 0.6, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.6) & (df_today['size_scaled']<=0.7), 0.7, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where(df_today['size_scaled'] > 0.7, 0.7, df_today['size_scaled'])
+
     fig_map_initial = px.scatter_mapbox(df_today, 
                                lat="latitude", 
                                lon="longitude",
@@ -307,9 +326,21 @@ def map_continent(df_merged, df_continents, continent, date, data_category):
     df_today = df_today.rename(columns={'date': 'Date',})
     df_today['size_scaled'] = (df_today[data_category]  - df_today[data_category].min()) / (df_today[data_category].max() - df_today[data_category].min())
     df_today['size_scaled'].fillna(0, inplace=True)
-    df_today['size_scaled'] = np.where(df_today['size_scaled'] < 0.012, 0.012, df_today['size_scaled'])
-    #df_today['size_scaled'] = np.where(np.logical_and(df_today['size_scaled']>=0.01, df_today['size_scaled']<=0.05), 0.05, df_today['size_scaled'])
-    df_today['size_scaled'] = np.where(df_today['size_scaled'] > 0.5, 0.5, df_today['size_scaled'])
+
+    df_today['size_scaled'] = np.where(df_today['size_scaled'] <= 0.012, 0.012, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.012) & (df_today['size_scaled']<=0.02), 0.02, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.02) & (df_today['size_scaled']<=0.03), 0.03, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.03) & (df_today['size_scaled']<=0.04), 0.04, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.04) & (df_today['size_scaled']<=0.05), 0.05, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.05) & (df_today['size_scaled']<=0.1), 0.1, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.1) & (df_today['size_scaled']<=0.2), 0.2, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.2) & (df_today['size_scaled']<=0.3), 0.3, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.3) & (df_today['size_scaled']<=0.4), 0.4, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.4) & (df_today['size_scaled']<=0.5), 0.4, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.5) & (df_today['size_scaled']<=0.6), 0.6, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.6) & (df_today['size_scaled']<=0.7), 0.7, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where(df_today['size_scaled'] > 0.7, 0.7, df_today['size_scaled'])
+
     continent_selected = df_continents.loc[df_continents['continent'] == continent]
     latitude = continent_selected.iloc[0]['latitude']
     longitude = continent_selected.iloc[0]['longitude']
@@ -366,7 +397,6 @@ def line_chart(df, df_world, country_list, data_category, date_max, date_min):
         fig.update_layout(title = f'{data_category} in the selected countries:')
     fig.update_layout(xaxis_title="Date",
                       yaxis_title=data_category,
-                      #autosize=False, 
                       height=600,
                       margin=dict(l=100, r=150, b=50, t=150, pad=4),
                       hovermode="x",
@@ -441,7 +471,7 @@ def bar_chart(df_merged, country_list, date, data_category):
     fig.update_layout(title = f'{data_category} sorted by descending order on {date}.')
     fig.update_layout(xaxis_title="Countries",
                       yaxis_title=data_category,
-                      height=700,
+                      height=600,
                       margin=dict(l=100, r=150, b=50, t=150, pad=4)),
     fig.update_layout(hovermode='x')
     fig.update_layout(clickmode='select')

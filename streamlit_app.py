@@ -170,14 +170,14 @@ with st.sidebar.expander("Learn more about this dashboard"):
             <li>Linking scatter map and charts with mouse click/select event</li>
         </ul>
 
-        <p><b>4. Github: <b><a href="https://github.com/orosz-attila/Covid-19-Dashboard" target="_blank">Attila Orosz</a></p>
+        <p><b>4. Github: <b><a href="https://github.com/orosz-attila/Spiced-Academy-Data-Science-Projects" target="_blank">Attila Orosz</a></p>
         """, 
         unsafe_allow_html=True,
         )
 
 
 #calling function for creating initial map (it does not plot it, yet)
-map_initial = fn.map_initial(df_merged, update_day, 'New cases')
+map_initial = fn.map_initial(df_merged, update_day, 'New cases (Last 7-day average)')
 
 if submit_button_map:
     del map_initial
