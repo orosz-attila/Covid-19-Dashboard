@@ -1,5 +1,5 @@
 # Covid-19-Dashboard
-Interactive dashboard with daily updates displaying Covid-19 data on plotly map and charts. The dashboard is deployed with Streamlit and can be found [here] (https://share.streamlit.io/orosz-attila/covid-19-dashboard/main). 
+Interactive dashboard with daily updates displaying Covid-19 data on plotly map and charts. The dashboard is deployed with Streamlit and can be found [here](https://share.streamlit.io/orosz-attila/covid-19-dashboard/main). 
 
 ## Description
 Coming soon..
