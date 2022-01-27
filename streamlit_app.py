@@ -13,7 +13,7 @@ cust.footer()
 
 
 # loding database with caching
-@st.cache(show_spinner=False)
+@st.cache(show_spinner=False, ttl=3600)
 def get_csv_from_url(): 
     '''This function downloads updated data from OWID website and returns it in a dataframe'''
     url="https://covid.ourworldindata.org/data/owid-covid-data.csv"
@@ -35,7 +35,7 @@ list_continents =  df_continents.continent.values.tolist()
 
 
 #functions by which the output will be cached for quicker performance. 
-@st.cache(show_spinner=False)
+@st.cache(show_spinner=False, ttl=3600)
 def get_update_day(df):
     '''This function gets the newest day of the dataset and returns it as the update day'''
     dates = df['date'].unique()
@@ -45,7 +45,7 @@ def get_update_day(df):
 update_day = get_update_day(df)
 
 
-@st.cache(show_spinner=False)
+@st.cache(show_spinner=False, ttl=3600)
 def get_datetime_max():
     '''This function converts update day of the dataset to datetime.date format for the streamlit date_input element in submit form 1.'''
     datetime_max = datetime.strptime(f'{update_day}', '%Y-%m-%d').date()
@@ -53,7 +53,7 @@ def get_datetime_max():
 datetime_max = get_datetime_max()
 
 
-@st.cache(show_spinner=False)
+@st.cache(show_spinner=False, ttl=3600)
 def get_datetime_min():
     '''This function converts the first day of the dataset ('2020-01-01') to datetime.date format for the streamlit date_input element in submit form 1.'''
     datetime_min = datetime.strptime('2020-01-01', '%Y-%m-%d').date()
@@ -61,7 +61,7 @@ def get_datetime_min():
 datetime_min = get_datetime_min() 
 
 
-@st.cache(show_spinner=False)
+@st.cache(show_spinner=False, ttl=3600)
 def date_max_min(update_day):
     '''This function calculates min and max dates for the range selector of country chart. date_max is the update day, date_min is 30 days earlier.'''
     date_max = update_day
