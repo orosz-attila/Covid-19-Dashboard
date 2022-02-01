@@ -169,7 +169,7 @@ def merging_dfs(df, df_coordinates):
 
 
 def df_world(df_owid):
-    '''This function returns the merged dataframe of country(df_merged) and world data'''
+    '''This function returns a dataframe with world data'''
     df_world = df_owid.loc[df_owid['iso_code'] == 'OWID_WRL']
 
     df_world = df_world[[
@@ -264,15 +264,33 @@ def continent_coordinates():
 
 def map_initial(df_merged, date, data_category):
     ''''This function returns a map with the selected date and data category'''
+
+    # filtering by the selected date
     date = str(date)
     df_today = df_merged[df_merged['date'] == date]
     df_today = df_today.rename(columns={'date': 'Date',})
+
+    # scaling scatters, setting min and max sizes
     df_today['size_scaled'] = (df_today[data_category]  - df_today[data_category].min()) / (df_today[data_category].max() - df_today[data_category].min())
     df_today['size_scaled'].fillna(0, inplace=True)
-    df_today['size_scaled'] = np.where(df_today['size_scaled'] < 0.012, 0.012, df_today['size_scaled'])
-    #df_today['size_scaled'] = np.where(np.logical_and(df_today['size_scaled']>=0.01, df_today['size_scaled']<=0.05), 0.05, df_today['size_scaled'])
-    df_today['size_scaled'] = np.where(df_today['size_scaled'] > 0.5, 0.5, df_today['size_scaled'])
-    
+    df_today['size_scaled'] = np.where(df_today['size_scaled'] <= 0.012, 0.012, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.012) & (df_today['size_scaled']<=0.02), 0.02, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.02) & (df_today['size_scaled']<=0.03), 0.03, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.03) & (df_today['size_scaled']<=0.04), 0.04, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.04) & (df_today['size_scaled']<=0.05), 0.05, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.05) & (df_today['size_scaled']<=0.1), 0.1, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.1) & (df_today['size_scaled']<=0.2), 0.2, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.2) & (df_today['size_scaled']<=0.3), 0.3, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.3) & (df_today['size_scaled']<=0.4), 0.4, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.4) & (df_today['size_scaled']<=0.5), 0.4, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.5) & (df_today['size_scaled']<=0.6), 0.6, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.6) & (df_today['size_scaled']<=0.7), 0.7, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where(df_today['size_scaled'] > 0.7, 0.7, df_today['size_scaled'])
+
+    # making a new column for hover label
+    df_today['data_category_fillna'] =  df_today[data_category].fillna(0)
+
+    # creating the map figure 
     fig_map_initial = px.scatter_mapbox(df_today, 
                                lat="latitude", 
                                lon="longitude",
@@ -284,17 +302,17 @@ def map_initial(df_merged, date, data_category):
                                opacity=0.5,
                                zoom=3.35,
                                center = {"lat": 50.61, "lon": 18.26},
-                               #width=1200,
                                height=950,
                                mapbox_style="basic",                              
                                hover_name='country',
-                               hover_data={"country": False, "Date": True, "size_scaled": False, "longitude": False, "latitude": False},
-                               #title=f'COVID-19 related {data_category} on {date}'
-                              )                         
+                               #title=f'COVID-19 related {data_category} on {date}',
+                               custom_data=['country', 'data_category_fillna'],
+                              )         
+    # updating layout                         
     fig_map_initial.update_layout(mapbox = dict(pitch=10, accesstoken=st.secrets['token'], style= 'mapbox://styles/mapbox/light-v8'))
-    fig_map_initial.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-#    fig_map_initial.update_layout(clickmode='event+select')
-#    fig_map_initial.update_layout(hoverdistance=-1)
+    fig_map_initial.update_layout(margin={"r":0,"t":0,"l":0,"b":0}) 
+    fig_map_initial.update_traces(marker_sizemin = 10, hovertemplate = '<b>%{customdata[0]}</b> <br>' + f'{data_category}' + ': %{customdata[1]:,.0f}<extra></extra>')
+    fig_map_initial.update_layout(hoverlabel=dict( font_size=15))
     fig_map_initial.update_layout(hovermode='closest')
     fig_map_initial.update_layout(coloraxis_showscale=False)
     return(fig_map_initial)
@@ -302,18 +320,39 @@ def map_initial(df_merged, date, data_category):
 
 def map_continent(df_merged, df_continents, continent, date, data_category):
     ''''This function returns a map zoomed on a selected continent with 3 user inputs selected in the sidebar form '1. Compare countries on the map': date, data category, continent'''
+    
+    # filtering by the selected date 
     date = str(date)
     df_today = df_merged[df_merged['date'] == date]
     df_today = df_today.rename(columns={'date': 'Date',})
+
+    # scaling scatters, setting min and max sizes  
     df_today['size_scaled'] = (df_today[data_category]  - df_today[data_category].min()) / (df_today[data_category].max() - df_today[data_category].min())
     df_today['size_scaled'].fillna(0, inplace=True)
-    df_today['size_scaled'] = np.where(df_today['size_scaled'] < 0.012, 0.012, df_today['size_scaled'])
-    #df_today['size_scaled'] = np.where(np.logical_and(df_today['size_scaled']>=0.01, df_today['size_scaled']<=0.05), 0.05, df_today['size_scaled'])
-    df_today['size_scaled'] = np.where(df_today['size_scaled'] > 0.5, 0.5, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where(df_today['size_scaled'] <= 0.012, 0.012, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.012) & (df_today['size_scaled']<=0.02), 0.02, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.02) & (df_today['size_scaled']<=0.03), 0.03, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.03) & (df_today['size_scaled']<=0.04), 0.04, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.04) & (df_today['size_scaled']<=0.05), 0.05, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.05) & (df_today['size_scaled']<=0.1), 0.1, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.1) & (df_today['size_scaled']<=0.2), 0.2, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.2) & (df_today['size_scaled']<=0.3), 0.3, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.3) & (df_today['size_scaled']<=0.4), 0.4, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.4) & (df_today['size_scaled']<=0.5), 0.4, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.5) & (df_today['size_scaled']<=0.6), 0.6, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where((df_today['size_scaled']>0.6) & (df_today['size_scaled']<=0.7), 0.7, df_today['size_scaled'])
+    df_today['size_scaled'] = np.where(df_today['size_scaled'] > 0.7, 0.7, df_today['size_scaled'])
+
+    # making a new column for hover label
+    df_today['data_category_fillna'] =  df_today[data_category].fillna(0)
+
+    # selecting continent, latitude and longitude  
     continent_selected = df_continents.loc[df_continents['continent'] == continent]
     latitude = continent_selected.iloc[0]['latitude']
     longitude = continent_selected.iloc[0]['longitude']
     continent_zoom = continent_selected.iloc[0]['zoom']
+
+    # creating the map figure 
     fig_map_continent = px.scatter_mapbox(df_today, 
                                lat=df_today["latitude"], 
                                lon=df_today["longitude"], 
@@ -326,14 +365,14 @@ def map_continent(df_merged, df_continents, continent, date, data_category):
                                zoom=continent_zoom,
                                center = {"lat": latitude, "lon": longitude},
                                height=950,
-                               mapbox_style="basic",  
-                               hover_name='country',
-                               hover_data={"Date": True, "size_scaled": False, "longitude": False, "latitude": False},
+                               mapbox_style="basic",
+                               custom_data=['country', 'data_category_fillna'],
                               )
+
+    # updating layout
     fig_map_continent.update_layout(mapbox = dict(pitch=10, accesstoken=st.secrets['token'], style= 'mapbox://styles/mapbox/light-v8'))
     fig_map_continent.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-#    fig_map_continent.update_layout(clickmode='select')
-#    fig_map_continent.update_layout(hoverdistance=-1)        
+    fig_map_continent.update_traces(marker_sizemin = 10, hovertemplate = '<b>%{customdata[0]}</b> <br>' + f'{data_category}' + ': %{customdata[1]:,.0f}<extra></extra>')       
     fig_map_continent.update_layout(hovermode='closest')
     fig_map_continent.update_layout(coloraxis_showscale=False)
     return(fig_map_continent)
@@ -356,7 +395,7 @@ def line_chart(df, df_world, country_list, data_category, date_max, date_min):
                             x=df_country['date'],
                             y=df_country[data_category],
                             name=country_list[i],
-                            hovertemplate = f'{country_list[i]}'+': %{y}<extra></extra>',
+                            hovertemplate = f'{country_list[i]}'+': %{y:,.0f}<extra></extra>',
                             mode="lines")
                         )
     #formatting chart  
@@ -366,7 +405,6 @@ def line_chart(df, df_world, country_list, data_category, date_max, date_min):
         fig.update_layout(title = f'{data_category} in the selected countries:')
     fig.update_layout(xaxis_title="Date",
                       yaxis_title=data_category,
-                      #autosize=False, 
                       height=600,
                       margin=dict(l=100, r=150, b=50, t=150, pad=4),
                       hovermode="x",
@@ -435,8 +473,9 @@ def bar_chart(df_merged, country_list, date, data_category):
                   x=df_date['country'], 
                   y=df_date[data_category],
                   marker={'color' : df_date['bar_colors']},
-                  hovertemplate = '%{x}'+': %{y}<extra></extra>')
+                  hovertemplate = '%{x}'+': %{y:,.0f}<extra></extra>')
     )
+
     # updating layout
     fig.update_layout(title = f'{data_category} sorted by descending order on {date}.')
     fig.update_layout(xaxis_title="Countries",
@@ -446,7 +485,7 @@ def bar_chart(df_merged, country_list, date, data_category):
     fig.update_layout(hovermode='x')
     fig.update_layout(clickmode='select')
     fig.update_layout(xaxis=dict(range=[xmin, xmax]))
-    fig.update_layout(yaxis=dict(autorange= True, fixedrange= False))
+    fig.update_layout(yaxis=dict(fixedrange= False))
     fig.update_xaxes(tickangle=45)
     fig.update_xaxes(rangeslider_yaxis_rangemode='match')
     fig.update_xaxes(rangeslider=dict(autorange=True))
