@@ -111,7 +111,7 @@ with st.sidebar.form(key='form_barchart'):
 
 # st.sidebar.subheader('Learn more about this dashboard')
 with st.sidebar.expander("Learn more about this dashboard"):
-     cust.expander_html_2()
+    cust.expander_html_2()
 
 
 #function for creating initial map (it does not plot it, yet)
