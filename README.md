@@ -1,16 +1,16 @@
 # Covid-19 Dashboard
 
-<p style='text-align: justify;'>Interactive dashboard with daily update displaying 23 Covid-19 related data categories on plotly map and charts. According to the user selection criteria, the daily data can be displayed on a scatter world map, the trends of country data in line- and barcharts, with the option of comparing countries in multiple data categories.</p>
+<p align="justify">Interactive dashboard with daily update displaying 23 Covid-19 related data categories on plotly map and charts. According to the user selection criteria, the daily data can be displayed on a scatter world map, the trends of country data in line- and barcharts, with the option of comparing countries in multiple data categories.</p>
 
-<p style='text-align: justify;'>The dashboard is <a href="https://docs.streamlit.io/streamlit-cloud/get-started/deploy-an-app" target="_blank">deployed with Streamlit</a> and can be found <a href="https://share.streamlit.io/orosz-attila/covid-19-dashboard" target="_blank">here</a>.</p>
+<p align="justify">The dashboard is <a href="https://docs.streamlit.io/streamlit-cloud/get-started/deploy-an-app" target="_blank">deployed with Streamlit</a> and can be found <a href="https://share.streamlit.io/orosz-attila/covid-19-dashboard" target="_blank">here</a>.</p>
 
-<p style='text-align: justify;'>The notebook of this dashboard project with detailed comments is also available on <a href="https://colab.research.google.com/drive/1StLDRJ7LVoPS10AULBxVOJo8rDqnt3U8" target="_blank">Jupyter Colab</a>.</p>
+<p align="justify">The notebook of this dashboard project with detailed comments is also available on <a href="https://colab.research.google.com/drive/1StLDRJ7LVoPS10AULBxVOJo8rDqnt3U8" target="_blank">Jupyter Colab</a>.</p>
 
 ## Description 
 <ol >
-    <li style='text-align: justify;'>streamlit_app.py: contains the codes which runs on Streamlit</li>
-    <li style='text-align: justify;'>functions.py: contains the codes of all the functions for data transformation and visualization (except those functions that uses the st.cache(), they can be find in the main file: streamlit_app.py) </li>
-    <li style='text-align: justify;'>customize.py: contains the codes for CSS and HTML customization</li>
+    <li align="justify">streamlit_app.py: contains the codes which runs on Streamlit</li>
+    <li align="justify">functions.py: contains the codes of all the functions for data transformation and visualization (except those functions that uses the st.cache(), they can be find in the main file: streamlit_app.py)</li>
+    <li align="justify">customize.py: contains the codes for CSS and HTML customization</li>
 </ol>
 
 ## Requirements 
@@ -19,7 +19,8 @@
 - public token is required for <a href="https://www.mapbox.com/maps/light" target="_blank">mapbox style</a>
 
 ## How to use this dashboard?
-<ol >
+
+<ol align="justify">
     <li style='text-align: justify;'>Compare countries on the map. Select a data category, a date and a continent for setting the zoom. Finally, hit Submit. (Hint: select "World" in the continent selector for world view.)</li>
     <li style='text-align: justify;'>Compare countries on line chart. Select one or more data categories and countries. Finally, hit Submit. (Hints: 1. Select the displayed time range on the left corner of the charts or set it with the range selector below. 2. Click on "World" in the legend to display the trace of World data.)</li>
     <li style='text-align: justify;'>Compare countries on bar chart. Select one or more data categories and countries. Finally, hit Submit. (Hint: 1. Set the range of the displayed bars with the range selector below.)</li>
