@@ -101,4 +101,4 @@ Testing dataset:
 </ul>
 
 ## License 
-<p style='text-align: justify;'>Code of this app is created by Attila Orosz and completely open access under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons BY license</a>. You have the permission to use, distribute, and reproduce these in any medium, provided the source and authors are credited.</p> 
+<p align="justify">Code of this app is created by Attila Orosz and completely open access under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons BY license</a>. You have the permission to use, distribute, and reproduce these in any medium, provided the source and authors are credited.</p> 
