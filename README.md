@@ -2,8 +2,10 @@
 
 <p align="justify">Interactive dashboard with daily update displaying 23 Covid-19 related data categories on plotly map and charts. According to the user selection criteria, the daily data can be displayed on a scatter world map, the trends of country data in line- and barcharts, with the option of comparing countries in multiple data categories.</p>
 
-<p align="justify">The dashboard is <a href="https://docs.streamlit.io/streamlit-cloud/get-started/deploy-an-app" target="_blank">deployed with Streamlit</a> and can be found here: [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/orosz-attila/covid-19-dashboard])
+<p align="justify">The dashboard is <a href="https://docs.streamlit.io/streamlit-cloud/get-started/deploy-an-app" target="_blank">deployed with Streamlit</a> and can be found here:<p>
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/orosz-attila/covid-19-dashboard) 
+    
 <p align="justify">The notebook of this dashboard project with detailed comments is also available on <a href="https://colab.research.google.com/drive/1StLDRJ7LVoPS10AULBxVOJo8rDqnt3U8" target="_blank">Jupyter Colab</a>.</p>
 
 ## Description 
