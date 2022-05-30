@@ -32,6 +32,16 @@ Hit Submit once again if you modified the selection criteria.
 
 Hit "Go back to map view" to go back to the main page.
 
+
+https://user-images.githubusercontent.com/89396215/154562196-b325952a-d5ba-460e-94f4-ae3114455fe6.mov
+
+
+https://user-images.githubusercontent.com/89396215/154564184-e39a2c74-825c-4063-b4c1-04924abe5c84.mov
+
+
+https://user-images.githubusercontent.com/89396215/154564189-415b9fff-b6e9-4265-891c-bf9808465435.mov
+
+
 ## Data categories
 |         | Data Category           | Description  |
 | :------------- |:-------------|:-----|
