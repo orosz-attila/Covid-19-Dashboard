@@ -1,6 +1,6 @@
 # Covid-19 Dashboard
 
-<p align="justify">UPDATE in 2023: Please note that the data source of this project is deprecated, and there are no data from most countries later than September of 2022. For more meaningful map visualization, please select the dates from 2021, as there are data from most countries from that year.<p>
+<p align="justify">UPDATE in 2023: Please note that the data source of this project is deprecated, and there are no data from most countries later than September of 2022. For more meaningful map visualization, please select the dates of year 2021, as there are complete data in all categoeries.<p> 
 
 <p align="justify">Interactive dashboard with daily update displaying 23 Covid-19 related data categories on plotly map and charts. According to the user selection criteria, the daily data can be displayed on a scatter world map, the trends of country data in line- and barcharts, with the option of comparing countries in multiple data categories.</p>
 
